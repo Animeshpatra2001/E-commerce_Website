@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>About Us</title>
+    <style>
+        .team-member-content {
+            display: none;
+            background-color: antiquewhite;
+            color: blueviolet;
+            font-size: 25px;
+            width: 500px;
+        }
+
+        button {
+            background-color: #6a62bb;
+            margin-left: 75px;
+            cursor: pointer;
+            margin-left: 75px;
+            border-radius: 5px;
+            padding: 12px 20px;
+
+        }
+
+        body {
+            background-color: rgba(220, 248, 174, 0.438);
+
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .bar {
+            margin-top: 5px;
+            margin-left: 20px;
+            height: 4px;
+            width: 600px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>About Us</h1>
+        <div class="bar"></div>
+        <br><br>
+        <p> SHG is a community-based group with 10-25 members. Members are usually women from similar social and economic backgrounds, all voluntarily coming together to save small sums of money, on a regular basis. They pool their resources to become financially stable, taking loans from their collective savings in times of emergency or financial scarcity, important life events or to purchase assets.The group members use collective wisdom and peer pressure to ensure proper end-use of credit and timely repayment. In India, RBI regulations mandate that banks offer financial services, including collateral free loans to these groups, on very low interest rates. This allows poor women to circumvent the challenges of exclusion from institutional financial services. This system is closely related to that of solidarity lending, widely used by microfinance institutions. Beyond their function as savings and credit groups, SHGs offer poor women a platform for building solidarity. They allow women to come together and act on issues related to their own lives including health,nutrition, governance and gender justice.</p>
+        <div class="team-member" id="team-member-1">
+            <h2>Team Member 1</h2>
+            <p class="team-member-content">
+                Hii I am Badri Narayan Dash <br> This page is devloped and maintained by me <br> &lt;&lt;&lt;&#169;Badri
+                Narayan Dash &gt;&gt;&gt;
+            </p>
+            <button onclick="toggleContent('team-member-1')">+</button>
+        </div>
+        <div class="team-member" id="team-member-2">
+            <h2>Team Member 2</h2>
+            <p class="team-member-content">
+                Hii I am Priyansu Panigrahi <br> This page is devloped and maintained by me <br>
+                &lt;&lt;&lt;&#169;Priyansu Panigrahi &gt;&gt;&gt;
+            </p>
+            <button onclick="toggleContent('team-member-2')">+</button>
+        </div>
+
+
+        <div class="team-member" id="team-member-3">
+            <h2>Team Member 3</h2>
+            <p class="team-member-content">
+                Hii I am Hitesh kumar jena <br> This page is devloped and maintained by me <br> &lt;&lt;&lt;&#169;Hitesh
+                kumar jena&gt;&gt;
+            </p>
+            <button onclick="toggleContent('team-member-3')">+</button>
+        </div>
+        <div class="team-member" id="team-member-4">
+            <h2>Team Member 4</h2>
+            <p class="team-member-content">
+                Hii I am prachi panigrahi <br> This page is devloped and maintained by me <br> &lt;&lt;&lt;&#169;prachi
+                panigrahi&gt;&gt;&gt;
+            </p>
+            <button onclick="toggleContent('team-member-4')">+</button>
+        </div>
+
+
+        <script>
+            function toggleContent(memberId) {
+                var content = document.getElementById(memberId).getElementsByClassName('team-member-content')[0];
+                if (content.style.display === 'none' || content.style.display === '') {
+                    content.style.display = 'block';
+                } else {
+                    content.style.display = 'none';
+                }
+            }
+        </script><br><br>
+        <footer>
+            <div><button><a href="./index.html">Back</a></button></div>
+
+        </footer>
+    </center>
+</body>
+
+</html>

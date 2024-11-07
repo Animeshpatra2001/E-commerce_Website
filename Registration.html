@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script>
+        $(document).ready(function () {
+            $("#myForm").submit(function (event) {
+                event.preventDefault();
+                $("#error-box").html("");
+                var username = $("#name").val();
+                var adhar = $("#an").val();
+                if (username == "" || username == null || adhar == "" || adhar == null) {
+                    $("#error-box").html("All fields must be filled out");
+                    return;
+                }
+                alert("Form submitted successfully!");
+                $("#myForm")[0].reset();
+                //reset is a jquery function used to reset the form after submitting it
+            });
+        });
+    </script>F
+    <style>
+        .d1 {
+            display: block;
+            width: 400px;
+            height: 500px;
+            background-color: rgb(156, 170, 170);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: larger;
+            margin: 2%;
+        }
+
+        .img {
+            width: 70px;
+        }
+
+        input,
+        select {
+            border: 3px solid blue;
+            border-radius: 5px;
+            padding: 8px;
+            font-size: 20px;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: orange;
+            color: brown;
+            padding: 12px 6px;
+            margin: 6px 4px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: green;
+            color: aqua;
+        }
+
+        #st {
+            width: 70%;
+        }
+
+        button {
+            background-color: #6a62bb;
+            margin-left: 75px;
+            cursor: pointer;
+            margin-left: 75px;
+            border-radius: 5px;
+            padding: 12px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="d1">
+            <div align="center">
+
+                <h4>Registration</h4>
+            </div>
+            <form id="myForm">
+                <label for="un">UserName</label>
+                <input type="text" id="name" placeholder="Enter name..." required><br><br>
+                <label for="un" style="padding-right: 3px;">AdharNo.</label>
+                <input type="number" id="an" placeholder="Enter adhar number..." required><br><br>
+                <label for="un" style="padding-right: 18px;">Mobile</label>
+                <input type="number" id="un" placeholder="Enter MobileNo..." required><br><br>
+                <label for="un" style="padding-right: 25px;">Gender</label>
+                <label for="un">Female</label>
+                <input type="radio" id="un" name="gender">
+                <label for="un">Male</label>
+                <input type="radio" id="un" name="gender"><br><br>
+                <label for="st" style="padding-right: 40px;">City</label>
+                <select name="city" id="st">
+                    <option value="" hidden>Select City :</option>
+                    <option value="ab">Cuttack</option>
+                    <option value="cd">Bhubaneswar</option>
+                    <option value="ef">Rourkela</option>
+                </select><br><br>
+
+                <input type="submit" value="Confirm">
+            </form>
+
+        </div>
+        <div><button><a href="./index.html">Back</a></button></div>
+    </center>
+
+</body>
+
+</html>
